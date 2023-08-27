@@ -1,0 +1,52 @@
+.card{
+    height: 500px;width: 320px;
+    margin-left:   80px;
+    position: relative;
+    perspective: 1000px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+ 
+ }
+
+ .card_front,.card_back{
+    height: 500px;width: 320px;
+    background-color: #1c044a;
+    box-shadow: 15px 15px 15px #140236;
+
+
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+
+
+
+    color: white;
+    font-family: monospace;
+    font-size: 10px;
+    border-radius: 25px
+ 
+ }
+
+ 
+.card_front{
+    transform: rotateY(0deg);
+    }
+    
+    .card_back{
+    transform: rotateY(180deg);
+    }
+    
+    .card:hover .card_front{
+    transform: rotateY(-180deg);
+    }
+    .card:hover .card_back{
+    
+    filter: opacity(100%);
+    transform: rotateY(-0deg);
+    }
+    .card_front img{
+        width: 50%;height: 50%;
+    }
+    
